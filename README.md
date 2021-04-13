@@ -34,28 +34,28 @@ let api = new ParseServer({
 	emailAdapter: {
 		module: "parse-mail-adapter-smtp-ejs",
 		options: {
-			from: 'your@sender.address',
-			user: 'email@email.com',
-			password: 'AwesomePassword',
-			host: 'your.smtp.host',
-			secure: true, //True or false if you are using ssl 
-			port: 465,
-    		locales: ["en", "fr"],
-    		defaultLocale: "en",
-    		templatesDir: __dirname + '/templates/',
-			templates: {
-			    //This template is used only for reset password email
-				resetPassword: {
-				    //Path to your template
-					template:'reset-password.html',
-					//Subject for this email
-					subject: 'Reset your password'
-				},
-				verifyEmail: {
-				    template: 'verify-email.html',
-				    subject: 'Verify Email'
-				}
-			}
+            from: 'your@sender.address',
+            user: 'email@email.com',
+            password: 'AwesomePassword',
+            host: 'your.smtp.host',
+            secure: true, //True or false if you are using ssl 
+            port: 465,
+            locales: ["en", "fr"],
+            defaultLocale: "en",
+            templatesDir: __dirname + '/templates/',
+            templates: {
+            //This template is used only for reset password email
+            resetPassword: {
+                    //Path to your template
+                    template:'reset-password.html',
+                    //Subject for this email
+                    subject: 'Reset your password'
+                },
+                verifyEmail: {
+                    template: 'verify-email.html',
+                    subject: 'Verify Email'
+                }
+            }
 		}
 	}
 });
