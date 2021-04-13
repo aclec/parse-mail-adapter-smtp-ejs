@@ -1,0 +1,15 @@
+{
+  "name": "parse-mail-adapter-smtp-ejs",
+  "version": "1.0.1",
+  "description": "Parse Server Mail Adapter with ejs tempates (SMTP)",
+  "main": "index.js",
+  "repository": "https://github.com/aclec/parse-mail-adapter-smtp-ejs.git",
+  "author": "aclec",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "nodemailer": "^6.5.0"
+  },
+  "keywords": ["parse", "mail", "ejs", "smtp", "multilingual", "template", "adapter"]
+}
