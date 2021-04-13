@@ -1,5 +1,5 @@
-# parse-mail-adapter-ejs
-Parse Server Mail Adapter with EJS templates
+# parse-mail-adapter-smtp-ejs
+Parse Server Mail Adapter with EJS templates (SMTP)
 
 ### Installation
 
