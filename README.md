@@ -44,13 +44,14 @@ let api = new ParseServer({
             defaultLocale: "en",
             templatesDir: __dirname + '/templates/',
             templates: {
-            //This template is used only for reset password email
-            resetPassword: {
-                    //Path to your template
-                    template:'reset-password.html',
-                    //Subject for this email
-                    subject: 'Reset your password'
-                },
+                //This template is used only for reset password email
+                //The locale used for these templates is the one of user.get("locale") or the default locale
+                resetPassword: {
+                        //Path to your template
+                        template:'reset-password.html',
+                        //Subject for this email
+                        subject: 'Reset your password'
+                    },
                 verifyEmail: {
                     template: 'verify-email.html',
                     subject: 'Verify Email'
