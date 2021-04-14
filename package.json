@@ -1,6 +1,6 @@
 {
   "name": "parse-mail-adapter-smtp-ejs",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Parse Server Mail Adapter with ejs tempates (SMTP)",
   "main": "index.js",
   "repository": "https://github.com/aclec/parse-mail-adapter-smtp-ejs.git",
