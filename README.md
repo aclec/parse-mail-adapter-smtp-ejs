@@ -23,17 +23,17 @@ const APP_PORT = 8080;
 
 
 let api = new ParseServer({
-	appName: "Parse Test",
-	appId: "appid",
-	masterKey: "secret",
-	serverURL: "http://localhost:3000/parse",
-	publicServerURL: "http://localhost:3000/parse",
-	databaseURI: "mongodb://user:pass@host:27017/parse",
-	port: APP_PORT,
-	//This is the config for email adapter
-	emailAdapter: {
-		module: "parse-mail-adapter-smtp-ejs",
-		options: {
+    appName: "Parse Test",
+    appId: "appid",
+    masterKey: "secret",
+    serverURL: "http://localhost:8080/parse",
+    publicServerURL: "http://localhost:8080/parse",
+    databaseURI: "mongodb://user:pass@host:27017/parse",
+    port: APP_PORT,
+    //This is the config for email adapter
+    emailAdapter: {
+    module: "parse-mail-adapter-smtp-ejs",
+        options: {
             from: 'your@sender.address',
             user: 'email@email.com',
             password: 'AwesomePassword',
@@ -56,8 +56,8 @@ let api = new ParseServer({
                     subject: 'Verify Email'
                 }
             }
-		}
-	}
+        }
+    }
 });
 
 
