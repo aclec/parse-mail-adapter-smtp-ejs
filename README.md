@@ -47,7 +47,7 @@ let api = new ParseServer({
                 //This template is used only for reset password email
                 //The locale used for these templates is the one of user.get("locale") or the default locale
                 resetPassword: {
-                        //Path to your template
+                        //Name to your template
                         template:'reset-password.html',
                         //Subject for this email
                         subject: 'Reset your password'
