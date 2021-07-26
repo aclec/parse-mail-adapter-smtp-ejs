@@ -13,6 +13,9 @@ let MailAdapter = (adapterOptions) => {
         auth: {
             user: adapterOptions.user,
             pass: adapterOptions.password
+        },
+        tls:{
+            ciphers:'SSLv3'
         }
     });
 
