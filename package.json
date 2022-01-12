@@ -3,6 +3,7 @@
   "version": "3.0.0",
   "description": "Parse Server Mail Adapter with ejs tempates (SMTP)",
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "build": "tsc"
   },
@@ -10,7 +11,9 @@
   "author": "aclec",
   "license": "MIT",
   "private": false,
-  "files": ["lib/**/*"],
+  "files": [
+    "lib/**/*"
+  ],
   "dependencies": {
     "ejs": "^3.1.6",
     "nodemailer": "^6.5.0"
@@ -25,6 +28,7 @@
     "adapter"
   ],
   "devDependencies": {
+    "@types/nodemailer": "^6.4.4",
     "typescript": "^4.5.4"
   }
 }
