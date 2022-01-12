@@ -21,7 +21,8 @@ let MailAdapter = (adapterOptions: AdapterOptionsInterface) => {
                     to: options.to,
                     subject: options.subject,
                     text: options.text || "",
-                    html: result
+                    html: result,
+                    attachments: options?.attachments || []
                 };
 
                 return _sendMail(mail, transporter);
