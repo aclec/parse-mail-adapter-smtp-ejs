@@ -8,7 +8,8 @@ export const _sendMail = (mail: MailOptionsInterface, transporter: Transporter<S
         to: mail.to,
         subject: mail.subject,
         html: mail?.html || "",
-        text: mail?.text || ""
+        text: mail?.text || "",
+        attachments: mail?.attachments || []
     };
 
     return new Promise((resolve, reject) => {
