@@ -1,6 +1,7 @@
 import {AdapterOptionsInterface} from "./types";
 import {createTransporter} from "./functions/createTransporter";
 import {sendEmail} from "./functions/email/sendEmail";
+import {sendPasswordResetEmail} from "./functions/email/sendPasswordResetEmail";
 
 let MailAdapter = (adapterOptions: AdapterOptionsInterface) => {
 
@@ -8,6 +9,7 @@ let MailAdapter = (adapterOptions: AdapterOptionsInterface) => {
 
     return Object.freeze({
         sendMail: sendEmail,
+        sendPasswordResetEmail: sendPasswordResetEmail
     })
 }
 

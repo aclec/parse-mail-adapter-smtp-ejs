@@ -4,7 +4,7 @@ import {Transporter} from "nodemailer";
 import SMTPTransport from "nodemailer/lib/smtp-transport";
 import {_sendMail} from "../_sendMail";
 
-interface PasswordEmailInterface{
+export interface PasswordEmailInterface{
     appName: string,
     link: string,
     user: Parse.User,
