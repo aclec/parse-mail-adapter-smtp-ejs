@@ -7,6 +7,7 @@ Install npm module in your parse server project
 
 ```sh
 $ npm install --save parse-mail-adapter-smtp-ejs
+$ yarn add parse-mail-adapter-smtp-ejs
 ```
 
 ### Use
@@ -32,31 +33,43 @@ let api = new ParseServer({
     port: APP_PORT,
     //This is the config for email adapter
     emailAdapter: {
-    module: "parse-mail-adapter-smtp-ejs",
+        module: "parse-mail-adapter-smtp-ejs",
         options: {
-            from: 'your@sender.address',
-            user: 'email@email.com',
-            password: 'AwesomePassword',
-            host: 'your.smtp.host',
-            secure: true, //True or false if you are using ssl 
-            port: 465,
-            locales: ["en", "fr"],
-            defaultLocale: "en",
-            templatesDir: __dirname + '/templates/',
-            templates: {
-                //This template is used only for reset password email
-                //The locale used for these templates is the one of user.get("locale") or the default locale
-                resetPassword: {
+
+            nodeMailerOptions: {
+                host: 'your.smtp.host',
+                port: 465,
+                secure: true, //True or false if you are using ssl 
+                auth: {
+                    user: 'email@email.com',
+                    password: 'AwesomePassword',
+                }
+                // you can add here other custom props for nodemailer like "tls"...
+            },
+
+            defaultFrom: 'noreply@sender.address', // Use for ResetPassword, VerifyEmail
+
+            templatesOptions: {
+                locales: ["en", "fr"],
+                defaultLocale: "en",
+                templatesDir: __dirname + '/templates/',
+
+                templates: {
+                    //This template is used only for reset password email
+                    //The locale used for these templates is the one of user.get("locale") or the default locale
+                    resetPassword: {
                         //Name to your template
                         template:'reset-password.html',
                         //Subject for this email
                         subject: 'Reset your password'
                     },
-                verifyEmail: {
-                    template: 'verify-email.html',
-                    subject: 'Verify Email'
+                    verifyEmail: {
+                        template: 'verify-email.html',
+                        subject: 'Verify Email'
+                    }
                 }
             }
+            
         }
     }
 });
@@ -89,7 +102,7 @@ templates/
 
 ### Send Mail From Cloud Code
 
-=> Parse Server > 4.5.0
+=> Parse Server >= 5.0.0
 ```js
 Parse.Cloud.sendEmail({
     template: "myTemplate.html", // Email Html
@@ -100,6 +113,25 @@ Parse.Cloud.sendEmail({
     text: "", // Email Text
     data: {} // data gives to ejs
 });
+```
+
+=> Parse Server < 5.0.0
+```js
+// Import on top
+const { AppCache } = require('parse-server/lib/cache');
+
+// To use in code
+const MailAdapter = AppCache.get('appid').userController.adapter;
+await MailAdapter.sendMail({
+    template: "myTemplate.html", // Email Html
+    locale: "en",
+    from: "your@sender.address",
+    to: "user@email.address",
+    subject: "my Subejct",
+    text: "", // Email Text
+    data: {} // data gives to ejs
+});
+
 ```
 
 
