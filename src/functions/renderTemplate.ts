@@ -1,5 +1,5 @@
 import {AdapterOptionsInterface} from "../types";
-import ejs from "ejs";
+import * as ejs from "ejs";
 
 export const renderTemplate = (
     template: string,
