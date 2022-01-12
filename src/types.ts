@@ -1,3 +1,9 @@
+export interface ParseDataEmailInterface{
+    appName: string,
+    link: string,
+    user: Parse.User,
+}
+
 
 export interface MailOptionsInterface{
     from: string,
