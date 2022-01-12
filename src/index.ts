@@ -6,7 +6,7 @@ import {_sendMail} from "./functions/_sendMail";
 let MailAdapter = (adapterOptions: AdapterOptionsInterface) => {
 
     // --- Init Transporter ---
-    console.log(adapterOptions);
+    //console.log(adapterOptions);
     const transporter = createTransporter(adapterOptions.nodeMailerOptions);
 
     // --- Email Functions ---
