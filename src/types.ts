@@ -3,8 +3,12 @@ export interface MailOptionsInterface{
     from: string,
     to: string,
     subject: string,
-    html?: string,
-    text?: string
+    html?: unknown,
+    text?: string,
+
+    template?: string,
+    data?: { [key: string]: string },
+    locale?: string
 }
 
 
