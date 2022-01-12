@@ -42,7 +42,7 @@ let api = new ParseServer({
                 secure: true, //True or false if you are using ssl 
                 auth: {
                     user: 'email@email.com',
-                    password: 'AwesomePassword',
+                    pass: 'AwesomePassword',
                 }
                 // you can add here other custom props for nodemailer like "tls"...
             },
