@@ -25,7 +25,8 @@
     "smtp",
     "multilingual",
     "template",
-    "adapter"
+    "adapter",
+    "parse-server"
   ],
   "devDependencies": {
     "@types/ejs": "^3.1.0",
