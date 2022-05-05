@@ -15,8 +15,8 @@
     "lib/**/*"
   ],
   "dependencies": {
-    "ejs": "^3.1.6",
-    "nodemailer": "^6.5.0"
+    "ejs": "^3.1.7",
+    "nodemailer": "^6.7.5"
   },
   "keywords": [
     "parse",
