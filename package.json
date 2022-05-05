@@ -1,6 +1,6 @@
 {
   "name": "parse-mail-adapter-smtp-ejs",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Parse Server Mail Adapter with ejs tempates (SMTP)",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
